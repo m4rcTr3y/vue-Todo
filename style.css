@@ -1,0 +1,168 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+#head{text-align:center; color:orange;}
+.todo-entry input, .todo-entry button{
+   padding:8px;  
+   border:0px;
+   height:100%;
+   outline:none;
+}
+.todo-entry input{
+   width:83%;
+}
+.todo-entry button {
+   width:17%;
+   background:orange;
+   font-size:19px;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   color:white;
+}
+.todo-entry {
+  width:90vw;
+  height:40px;
+  border:1px solid orange;
+  display:flex;
+  border-radius:3px;
+  box-shadow:0 0 2px, 0 0 2px orange;
+  overflow:hidden;
+  margin:0 auto;
+  
+}
+
+.todo-cont{
+ width:300px;
+min-height:60vh;
+margin:20px auto;
+position:relative;
+display:flex;
+flex-direction:column;
+padding:3px;
+justify-content:center;
+}
+.todo-list{
+width:100%;
+height:300px;
+background:white;
+margin-bottom:4px;
+overflow-y:scroll;
+}
+.todo{
+  width:90%;
+  height:60px;
+  background:rgba(190,168,0,0.1);
+  display:flex;
+  justify-content:space-between;
+  padding:3px;
+  align-items:center;
+  border:1px solid orange;
+  border-radius:3px;
+  margin:5px auto;
+  
+}
+.todo p {
+  color:orange;
+  font-family:Tahoma,Arial,sans-serif;
+  font-weight:2px;
+}
+
+.todo button {
+   background:orange;
+   border:0px;
+   width:28px;
+   height:28px;
+   margin:2px;
+   text-align:center;
+   border-radius:3px;
+   color:white;
+   font-size:16px;
+   box-shadow:0 0 1px grey;
+}
+.todo-opt{
+  display:flex;
+  
+}
+
+.todo-view{
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index:100;
+  background:rgba(0,0,0,0.5);
+  margin:0;
+  top:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:1s;
+}
+
+.todo-view .view-cont{
+   background:orange;
+   width:80%;
+   border-radius:3px;
+   height:160px;
+   box-shadow:0 0 3px, 0 0 8px orange;
+   border:2px solid white;
+   position:relative;
+   
+}
+.todo-view .view-cont .btn{
+    position:absolute;
+   margin-top:-20px;
+   right:-5px;
+   width:40px;
+   height:40px;
+   border-radius:100%;
+   border:2px solid white;
+   background:white;
+   color:red;
+   font-size:18px;
+}
+.todo-view .view-cont p{
+    font-size:19px;
+    padding:6px;
+    color:white;
+    width:200px;
+    text-align:left;
+    height:80px;
+    overflow:scroll;
+    margin:0 auto;
+}
+
+.todo-view .view-cont h1{ 
+ padding:8px;
+ color:white;
+ text-shadow:0 0 6px white;
+ font-size:24px;
+}
+
+.todo-view .view-cont input{
+   padding:11px;
+   width:98%;
+   height:40px;
+   margin:10px auto;
+   border:1px solid green;
+   border-left:1px solid white;
+   border-top-right-radius:3px;
+   border-bottom-right-radius:3px;
+   outline:none;
+   color:orange;
+}
+
+.edit{
+  display:block;
+  width:50px;
+  height:30px;
+  background:white;
+  border:1px solid white;
+  border-radius:3px;
+  color:orange;
+  font-size:19px;
+  margin:4px;
+ 
+}
