@@ -14,10 +14,11 @@
      <v-view v-bind:todo="viewer"></v-view>
      <v-edit v-bind:todo="editor" v-bind:reff="todos"></v-edit>
       <div class="todo-cont">
-        <div class="todo-list" >
+        <div v-if="todos.length != 0"class="todo-list" >
           <v-todo v-for="(item,id) in todos" v-bind:todo.sync="item" v-bind:key="id" v-bind:func="show" v-bind:edit="editing"></v-todo>
            
         </div>
+        <h3 v-else>{{status}}</h3>
       	
       	<div class="todo-entry">
       	  <input type="text" v-model="todo" placeholder="text here..." >
@@ -27,6 +28,7 @@
       
    </div> 
 </body>
+<!--script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js" type="text/javascript" charset="utf-8"></script-->
 <script src="vue.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="main.js" type="text/javascript" charset="utf-8"></script>
 </html>

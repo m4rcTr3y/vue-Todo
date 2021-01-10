@@ -23,7 +23,7 @@
    color:white;
 }
 .todo-entry {
-  width:90vw;
+  width:80%;
   height:40px;
   border:1px solid orange;
   display:flex;
@@ -35,8 +35,8 @@
 }
 
 .todo-cont{
- width:300px;
-min-height:60vh;
+ width:320px;
+height:auto;
 margin:20px auto;
 position:relative;
 display:flex;
@@ -46,10 +46,16 @@ justify-content:center;
 }
 .todo-list{
 width:100%;
-height:300px;
+max-height:300px;
 background:white;
 margin-bottom:4px;
 overflow-y:scroll;
+}
+h3{
+  text-align:center;
+  padding:8px;
+  color:orange;
+  
 }
 .todo{
   width:90%;
@@ -144,7 +150,7 @@ overflow-y:scroll;
 .todo-view .view-cont input{
    padding:11px;
    width:98%;
-   height:40px;
+   height:50px;
    margin:10px auto;
    border:1px solid green;
    border-left:1px solid white;

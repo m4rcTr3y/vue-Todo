@@ -66,12 +66,29 @@ var app = new Vue({
     el:'#app',
     data: {
       todo:'',
+      status:'',
       viewer: {data:'',show:false,id:''},
       editor: {edit: false,item:''},
       todos:[
-      {id:1,text:"my name is mark"},
-      {id:2,text:"hey i am mark is my name blah blah"}
+      {id:1,text:"my name is mark and am a developer"},
+      {id:2,text:"i hate buggy code"},
+      {id:3,text:"coding is a fun hobby"},
+      {id:4,text:"javascript, python"},
+      {id:5,text:"c++"},
+      
+      
+      
       ]
+    },
+    watch:{
+      todos:function(){
+        if(this.todos.length == 0){
+           this.status = "No todos.."
+        }
+        else{
+         this.status=""
+        }
+      }
     },
     methods:{
        addTodo:function(){
