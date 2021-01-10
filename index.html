@@ -15,9 +15,10 @@
      <v-view v-bind:todo="viewer"></v-view>
      <v-edit v-bind:todo="editor" v-bind:reff="todos"></v-edit>
       <div class="todo-cont">
-        <div v-if="todos.length != 0"class="todo-list" >
-          <v-todo v-for="(item,id) in todos" v-bind:todo.sync="item" v-bind:key="id" v-bind:func="show" v-bind:edit="editing"></v-todo>
-           
+        <div v-if="todos.length != 0" class="todo-list" >
+         <transition-group name="fade" tag="div">
+          <v-todo v-for="(item,id) in todos" v-bind:todo.sync="item" v-bind:key="item.id" v-bind:func="show" v-bind:edit="editing"></v-todo>
+        </transition-group>
         </div>
         <h3 v-else>{{status}}</h3>
       	

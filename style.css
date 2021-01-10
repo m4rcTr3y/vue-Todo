@@ -68,7 +68,7 @@ h3{
   border:1px solid orange;
   border-radius:3px;
   margin:5px auto;
-  
+  transition:.5s;
 }
 .todo p {
   color:orange;
@@ -171,4 +171,17 @@ h3{
   font-size:19px;
   margin:4px;
  
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s;
+}
+
+.fade-enter{
+  transform:translateX(-100%);
+}
+
+.fade-leave-to {
+  transform:scale(0);
+  opacity:0;
 }

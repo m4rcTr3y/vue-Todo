@@ -15,6 +15,7 @@ Vue.component('v-todo',{
     }
   },
   template:`
+    
      <div class="todo" >
      <p>{{compTodo}}</p>
      <div class="todo-opt" >
@@ -24,7 +25,7 @@ Vue.component('v-todo',{
      
      </div>
      </div>
-  
+    
   `
 });
 
