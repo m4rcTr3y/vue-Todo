@@ -75,11 +75,7 @@ var app = new Vue({
       {id:2,text:"i hate buggy code"},
       {id:3,text:"coding is a fun hobby"},
       {id:4,text:"javascript, python"},
-      {id:5,text:"c++"},
-      
-      
-      
-      ]
+      {id:5,text:"c++"},]
     },
     watch:{
       todos:function(){
@@ -87,19 +83,21 @@ var app = new Vue({
            this.status = "No todos.."
         }
         else{
-         this.status=""
+           this.status=""
         }
+        this.reIndex();
       }
     },
     methods:{
        addTodo:function(){
           this.todos.push({id:this.todos.length+1,text:this.todo});
           this.todo = ''; 
+          //this.reIndex();
        },
        show:function(todo){
-         this.viewer.data = todo.text;
-         this.viewer.show = true;
-         this.viewer.id = todo.id
+           this.viewer.data = todo.text;
+           this.viewer.show = true;
+           this.viewer.id = todo.id;
          },
          delTodo:function(todo){
            this.todos.splice(this.todos.indexOf(todo),1);
@@ -108,6 +106,12 @@ var app = new Vue({
          editing:function(item){
            this.editor.id = item.id;
            this.editor.edit = true;
+         },
+         reIndex:function(){
+            var vm = this;
+            this.todos.forEach(function(item){
+               item.id = vm.todos.indexOf(item)+1;
+            });        
          }
              
        }
