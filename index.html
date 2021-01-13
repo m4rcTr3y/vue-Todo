@@ -12,7 +12,7 @@
 <body>
    <div id="app">
     <h1 id="head" >Vue Todo</h1>
-    {{todos}}
+    {{editor}}
      <v-view v-bind:todo="viewer"></v-view>
      <v-edit v-bind:todo="editor" v-bind:reff="todos"></v-edit>
       <div class="todo-cont">
@@ -21,6 +21,7 @@
           <v-todo v-for="(item,id) in todos" v-bind:todo.sync="item" v-bind:key="item.id" v-bind:func="show" v-bind:edit="editing"></v-todo>
         </transition-group>
         </div>
+        
         <h3 v-else>{{status}}</h3>
       	
       	<div class="todo-entry">

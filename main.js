@@ -49,11 +49,11 @@ Vue.component('v-view',{
 Vue.component('v-edit',{
   props:['todo', 'reff'],
   template:`
-    <div v-if="todo.edit == true" class="todo-view">
+    <div v-if="todo.edit == true" class="todo-view" >
       <div class="view-cont">
        
-       <h1>Edit Todo ({{todo.id}})</h1>
-       <input type="text" v-model="reff[todo.id-1].text" >
+       <h1>Edit Todo ({{todo.id+1}})</h1>
+       <input type="text" v-model="reff[todo.id].text" >
        <button class="edit" v-on:click="todo.edit=false"> <i class="fa fa-check"></i> </button>
        
      </div>
@@ -62,10 +62,9 @@ Vue.component('v-edit',{
 
 });
 
-
 var app = new Vue({
     el:'#app',
-    data: {
+    data:{
       todo:'',
       status:'',
       viewer: {data:'',show:false,id:''},
@@ -76,6 +75,7 @@ var app = new Vue({
       {id:3,text:"coding is a fun hobby"},
       {id:4,text:"javascript, python"},
       {id:5,text:"c++"},]
+    
     },
     watch:{
       todos:function(){
@@ -84,8 +84,9 @@ var app = new Vue({
         }
         else{
            this.status=""
+           //this.reIndex();
         }
-        this.reIndex();
+        //this.reIndex();
       }
     },
     methods:{
@@ -104,8 +105,10 @@ var app = new Vue({
            
          },
          editing:function(item){
-           this.editor.id = item.id;
+           //alert(item.id)
+           this.editor.id = this.todos.indexOf(item);
            this.editor.edit = true;
+           
          },
          reIndex:function(){
             var vm = this;
@@ -116,3 +119,6 @@ var app = new Vue({
              
        }
 });
+
+
+

@@ -1,5 +1,7 @@
-*vue todo/ notepad*
 
-> add,delete,modify todo.
+![VueTodo](logo.png)
 
-> with transition to todos on delete and add
+# **vue todo/ notepad**
+
+ * add,delete,modify todo.
+ * with transition to todos on delete and add.
